@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Drop_Down" data-name="Drop Down" transform="translate(-236 -252)">
+    <g id="arrow-down" transform="translate(236 252)">
+      <path id="Vector" d="M32.3,0H2.7A2.692,2.692,0,0,0,.8,4.6l12.95,12.95a5.326,5.326,0,0,0,7.525,0L26.2,12.625,34.222,4.6A2.705,2.705,0,0,0,32.3,0Z" transform="translate(12.503 20.45)" fill="#656554"/>
+      <path id="Vector-2" data-name="Vector" d="M0,0H60V60H0Z" transform="translate(60 60) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

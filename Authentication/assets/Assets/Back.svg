@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="Back" transform="translate(-400 -373)">
+    <g id="Rectangle_63" data-name="Rectangle 63" transform="translate(400 373)" fill="#656554" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="80" height="80" stroke="none"/>
+      <rect x="0.5" y="0.5" width="79" height="79" fill="none"/>
+    </g>
+    <path id="Frame" d="M42,43.333a2,2,0,0,0-2,2v16.5a2,2,0,0,1-3.414,1.414L14.747,41.414a2,2,0,0,1,0-2.828L36.585,16.747A2,2,0,0,1,40,18.161v16.5a2,2,0,0,0,2,2H64.666a2,2,0,0,1,2,2v2.667a2,2,0,0,1-2,2Z" transform="translate(399.586 373)" fill="#656554"/>
+  </g>
+</svg>

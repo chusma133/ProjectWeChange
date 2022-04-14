@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Headphone" transform="translate(-616 -190)">
+    <g id="headphone-2" data-name="headphone" transform="translate(616 190)">
+      <path id="Vector" d="M2.193,48.417A2.2,2.2,0,0,1,.005,46.229V29.6A28.892,28.892,0,0,1,29.026,0,29.352,29.352,0,0,1,58.339,29.313V45.938a2.188,2.188,0,0,1-4.375,0V29.313A24.964,24.964,0,0,0,29.026,4.375,24.511,24.511,0,0,0,4.38,29.546V46.2A2.191,2.191,0,0,1,2.193,48.417Z" transform="translate(5.828 5.979)" fill="#656554"/>
+      <path id="Vector-2" data-name="Vector" d="M11.492,0h-.379A11.128,11.128,0,0,0,0,11.113V16.6A11.128,11.128,0,0,0,11.113,27.708h.379A11.128,11.128,0,0,0,22.6,16.6V11.113A11.128,11.128,0,0,0,11.492,0Z" transform="translate(5.833 36.312)" fill="#656554"/>
+      <path id="Vector-3" data-name="Vector" d="M11.492,0h-.379A11.128,11.128,0,0,0,0,11.113V16.6A11.128,11.128,0,0,0,11.112,27.708h.379A11.128,11.128,0,0,0,22.6,16.6V11.113A11.128,11.128,0,0,0,11.492,0Z" transform="translate(41.563 36.312)" fill="#656554"/>
+      <path id="Vector-4" data-name="Vector" d="M0,0H70V70H0Z" transform="translate(70 70) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

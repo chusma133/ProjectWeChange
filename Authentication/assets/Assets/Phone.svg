@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Phone" transform="translate(-104 -382)">
+    <g id="mobile" transform="translate(104 382)">
+      <path id="Vector" d="M35.7,0H10.967C2.917,0,0,2.917,0,11.113V47.221c0,8.2,2.917,11.112,10.967,11.112h24.7c8.079,0,11-2.917,11-11.112V11.113C46.667,2.917,43.75,0,35.7,0ZM23.333,50.458a5.1,5.1,0,1,1,5.1-5.1A5.129,5.129,0,0,1,23.333,50.458ZM29.167,12.4H17.5a2.187,2.187,0,0,1,0-4.375H29.167a2.188,2.188,0,1,1,0,4.375Z" transform="translate(11.667 5.833)" fill="#656554"/>
+      <path id="Vector-2" data-name="Vector" d="M0,0H70V70H0Z" transform="translate(70 70) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

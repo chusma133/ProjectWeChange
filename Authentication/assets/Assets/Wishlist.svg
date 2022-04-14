@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="Wishlist" transform="translate(-236 -188)">
+    <g id="heart" transform="translate(236 188)">
+      <path id="Vector" d="M48.133,0a18.5,18.5,0,0,0-14.8,7.433A18.506,18.506,0,0,0,0,18.633,35.6,35.6,0,0,0,1.733,29.667C7,46.333,23.233,56.3,31.267,59.033a7.269,7.269,0,0,0,4.133,0c8.033-2.733,24.267-12.7,29.533-29.367a35.6,35.6,0,0,0,1.733-11.033A18.579,18.579,0,0,0,48.133,0Z" transform="translate(6.667 10.333)" fill="#fff"/>
+      <path id="Vector-2" data-name="Vector" d="M0,0H80V80H0Z" transform="translate(80 80) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>
