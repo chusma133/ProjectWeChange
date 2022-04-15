@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   Text,
@@ -9,70 +9,68 @@ import {
   ImageBackground,
   ScrollView,
   Switch,
-} from "react-native";
-import Typography from "../../typography";
-import DolorIcon from "./../../../assets/Assets/dollor.svg";
-import MoneyIcon from "./../../../assets/Assets/Money.svg";
-import SettingIcon from "./../../../assets/Assets/Settings.svg";
-import typography from "../../typography";
-import VirtualKeyboard from "react-native-virtual-keyboard";
-import  Feather  from "react-native-vector-icons/Feather";
-import  Fontisto  from "react-native-vector-icons/Fontisto";
-let Shop = ({ navigation }) => {
-  const [active, setactive] = useState("");
-  const [text, settext] = useState("0");
+} from 'react-native';
+import Typography from '../../typography';
+import typography from '../../typography';
+import VirtualKeyboard from 'react-native-virtual-keyboard';
+import Feather from 'react-native-vector-icons/Feather';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import {SvgXml, WithLocalSvg} from 'react-native-svg';
+
+let Shop = ({navigation}) => {
+  const [active, setactive] = useState('');
+  const [text, settext] = useState('0');
   const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   let transaction = [
     {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
     },
     {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
     },
     {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
-    },
-
-    {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
-    },
-    {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
     },
 
     {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
     },
     {
-      email: "we@monica4567",
-      for: "FOR BOMB WEED",
-      price: "-56.00",
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
     },
   ];
   return (
     <SafeAreaView style={styles._container}>
-      {active !== "dollar" && (
+      {active !== 'dollar' && (
         <>
           <View style={styles._header}>
             <ImageBackground
-              source={require("./../../../assets/square.png")}
+              source={require('./../../../assets/square.png')}
               style={styles._bg}
-              resizeMode="contain"
-            >
+              resizeMode="contain">
               <View style={styles._square}></View>
               <Text style={styles._email}>we@Adrianph313</Text>
               <Text style={styles._price}>$2,460</Text>
@@ -84,31 +82,30 @@ let Shop = ({ navigation }) => {
 
           {/* transcation list */}
           {/*  */}
-          {active !== "setting" ? (
+          {active !== 'setting' ? (
             <View style={styles._body}>
               <Text
                 style={{
                   fontFamily: typography.regular,
-                  color: "white",
-                  alignSelf: "center",
+                  color: 'white',
+                  alignSelf: 'center',
                   marginBottom: 10,
-                }}
-              >
+                }}>
                 TRANSACTIONS
               </Text>
-              <ScrollView contentContainerStyle={{ paddingBottom: 130 }}>
+              <ScrollView contentContainerStyle={{paddingBottom: 130}}>
                 {transaction.map((val, i) => {
                   return (
                     <TouchableOpacity style={styles._list} key={i}>
                       <View style={styles._desc}>
-                        <Text style={{ fontFamily: typography.regular }}>
+                        <Text style={{fontFamily: typography.regular}}>
                           {val.email}
                         </Text>
-                        <Text style={{ fontFamily: typography.regular }}>
+                        <Text style={{fontFamily: typography.regular}}>
                           {val.for}
                         </Text>
                       </View>
-                      <Text style={{ fontFamily: typography.regular }}>
+                      <Text style={{fontFamily: typography.regular}}>
                         {val.price}
                       </Text>
                     </TouchableOpacity>
@@ -117,29 +114,27 @@ let Shop = ({ navigation }) => {
               </ScrollView>
             </View>
           ) : (
-            <View style={[styles._body, { marginTop: 0 }]}>
+            <View style={[styles._body, {marginTop: 0}]}>
               <View style={styles._card}>
                 <View style={styles._card_header}>
                   <TouchableOpacity
-                    style={styles._back_square}
-                  ></TouchableOpacity>
+                    style={styles._back_square}></TouchableOpacity>
                   <Fontisto
                     name="close-a"
                     size={24}
                     color="grey"
-                    onPress={() => setactive("")}
+                    onPress={() => setactive('')}
                   />
                 </View>
                 <View
                   style={{
                     flex: 1,
-                    alignItems: "center",
+                    alignItems: 'center',
                     marginTop: 20,
-                  }}
-                >
+                  }}>
                   <Switch
-                    trackColor={{ false: "#000000", true: "#000000" }}
-                    thumbColor={"#FFFFFF"}
+                    trackColor={{false: '#000000', true: '#000000'}}
+                    thumbColor={'#FFFFFF'}
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
@@ -150,7 +145,7 @@ let Shop = ({ navigation }) => {
           )}
         </>
       )}
-      {active === "dollar" && (
+      {active === 'dollar' && (
         <View style={styles._keyboard_view}>
           <View style={styles._price_view}>
             <Feather name="dollar-sign" size={50} color={typography.white} />
@@ -160,37 +155,32 @@ let Shop = ({ navigation }) => {
             color="white"
             pressMode="string"
             decimal
-            onPress={(val) => settext(val)}
+            onPress={val => settext(val)}
             cellStyle={{
               borderBottomWidth: 1,
-              borderColor: "grey",
+              borderColor: 'grey',
               margin: 5,
             }}
             fontSize={40}
           />
           <View
-            style={{ flex: 1, justifyContent: "flex-end", paddingBottom: 190 }}
-          >
+            style={{flex: 1, justifyContent: 'flex-end', paddingBottom: 190}}>
             <View style={styles._row}>
               <ImageBackground
-                source={require("./../../../assets/Requestprice.png")}
-                style={{ height: 61, width: 195 }}
-              >
+                source={require('./../../../assets/Requestprice.png')}
+                style={{height: 61, width: 195}}>
                 <TouchableOpacity
                   style={[styles._innter_section]}
-                  onPress={() => navigation.navigate("RequestFund")}
-                >
+                  onPress={() => navigation.navigate('RequestFund')}>
                   <Text style={styles._btn_text}>REQUEST</Text>
                 </TouchableOpacity>
               </ImageBackground>
               <View style={styles._divider}></View>
               <ImageBackground
-                source={require("./../../../assets/send.png")}
-                style={{ height: 61, width: 195 }}
-              >
+                source={require('./../../../assets/send.png')}
+                style={{height: 61, width: 195}}>
                 <TouchableOpacity
-                  style={[styles._innter_section, { alignItems: "flex-start" }]}
-                >
+                  style={[styles._innter_section, {alignItems: 'flex-start'}]}>
                   <Text style={styles._btn_text}>SEND</Text>
                 </TouchableOpacity>
               </ImageBackground>
@@ -215,24 +205,33 @@ let Shop = ({ navigation }) => {
       <View style={styles._footer}>
         <TouchableOpacity
           style={styles._footer_icons}
-          onPress={() => setactive("dollar")}
-        >
-          <DolorIcon width={30} height={30} />
+          onPress={() => setactive('dollar')}>
+          <WithLocalSvg
+            asset={require('./../../../assets/Assets/dollor.svg')}
+            width={30}
+            height={30}
+          />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles._footer_icons}
           onPress={() => {
-            setactive("");
-            navigation.navigate("RequestFund");
-          }}
-        >
-          <MoneyIcon width={30} height={30} />
+            setactive('');
+            navigation.navigate('RequestFund');
+          }}>
+          <WithLocalSvg
+            asset={require('./../../../assets/Assets/Money.svg')}
+            width={30}
+            height={30}
+          />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles._footer_icons}
-          onPress={() => setactive("setting")}
-        >
-          <SettingIcon width={30} height={30} />
+          onPress={() => setactive('setting')}>
+          <WithLocalSvg
+            asset={require('./../../../assets/Assets/Settings.svg')}
+            width={30}
+            height={30}
+          />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -245,18 +244,18 @@ let styles = StyleSheet.create({
   },
   _footer: {
     height: 70,
-    backgroundColor: "black",
-    position: "absolute",
+    backgroundColor: 'black',
+    position: 'absolute',
     bottom: 60,
-    width: "100%",
+    width: '100%',
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 10,
     borderWidth: 0.1,
-    borderColor: "white",
+    borderColor: 'white',
     borderBottomWidth: 0,
   },
   _footer_icons: {
@@ -264,8 +263,8 @@ let styles = StyleSheet.create({
   },
   _header: {
     flex: 1.7,
-    backgroundColor: "black",
-    justifyContent: "center",
+    backgroundColor: 'black',
+    justifyContent: 'center',
     zIndex: -10,
     // alignItems: "center",
   },
@@ -280,8 +279,8 @@ let styles = StyleSheet.create({
   },
   _bg: {
     height: 210,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: 30,
     // width: "100%",
   },
@@ -307,11 +306,11 @@ let styles = StyleSheet.create({
     fontSize: 12,
   },
   _list: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     elevation: 5,
     borderRadius: 10,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     padding: 10,
     marginBottom: 10,
   },
@@ -320,7 +319,7 @@ let styles = StyleSheet.create({
   },
   _keyboard_view: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: 'black',
   },
   entered_price: {
     // fontFamily: typography.bold,
@@ -329,26 +328,26 @@ let styles = StyleSheet.create({
     lineHeight: 55,
   },
   _price_view: {
-    alignSelf: "center",
-    flexDirection: "row",
-    justifyContent: "center",
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
     marginTop: 40,
     marginBottom: 40,
   },
   _row: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   _divider: {
     borderWidth: 0.3,
     height: 61,
-    borderColor: "grey",
+    borderColor: 'grey',
     marginHorizontal: 5,
   },
   _innter_section: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "flex-end",
+    justifyContent: 'center',
+    alignItems: 'flex-end',
   },
   _btn_text: {
     fontFamily: typography.medium,
@@ -356,24 +355,24 @@ let styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   _card: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
     height: 200,
     padding: 20,
   },
   _card_header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     borderBottomWidth: 1,
     paddingBottom: 20,
-    borderColor: "#e6e1e1",
+    borderColor: '#e6e1e1',
   },
   _back_square: {
     borderWidth: 1,
     height: 22,
     width: 32,
     borderRadius: 2,
-    borderColor: "#333333",
+    borderColor: '#333333',
   },
 });
 export default Shop;

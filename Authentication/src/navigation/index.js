@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {View, ActivityIndicator} from 'react-native';
+import {View, ActivityIndicator, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
+import {SvgXml, WithLocalSvg} from 'react-native-svg';
 import SignInScreen from '../screens/SignInScreen/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen/SignUpScreen';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen/ConfirmEmailScreen';
@@ -19,7 +19,8 @@ import Shop from './../screens/shop';
 import WeChange from './../screens/wechange';
 import Comments from './../screens/comments';
 import RequestFund from './../screens/comments';
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Typography from './../typography';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,24 +34,23 @@ export function TabNavigation() {
           backgroundColor: Typography.secondry,
           // borderTopLeftRadius: 30,
           // borderTopRightRadius: 30,
-          position: "absolute",
+          position: 'absolute',
           bottom: 0,
           // elevation: 9,
           height: 60,
           borderTopWidth: 0,
         },
-      }}
-    >
+      }}>
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({focused}) => (
             <View style={styles._tab_icon_main}>
-              <Home_Active
-                fill={Typography.primary}
+              <WithLocalSvg
+                asset={require('./../../assets/Assets/Home_Active.svg')}
                 height={30}
                 width={30}
                 style={styles._tab_icon}
@@ -65,9 +65,14 @@ export function TabNavigation() {
         options={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({focused}) => (
             <View style={styles._tab_icon_main}>
-              <Dicover_Active height={30} width={30} style={styles._tab_icon} />
+              <WithLocalSvg
+                asset={require('./../../assets/Assets/Dicover_Active.svg')}
+                height={30}
+                width={30}
+                style={styles._tab_icon}
+              />
             </View>
           ),
         }}
@@ -78,10 +83,10 @@ export function TabNavigation() {
         options={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({focused}) => (
             <View style={styles._tab_icon_main}>
-              <Shop_Active
-                fill={Typography.primary}
+              <WithLocalSvg
+                asset={require('./../../assets/Assets/Shop_Active.svg')}
                 height={30}
                 width={30}
                 style={styles._tab_icon}
@@ -96,9 +101,14 @@ export function TabNavigation() {
         options={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({focused}) => (
             <View style={styles._tab_icon_main}>
-              <WeCover height={30} width={30} style={styles._tab_icon} />
+              <WithLocalSvg
+                asset={require('./../../assets/Assets/wechange.svg')}
+                height={30}
+                width={30}
+                style={styles._tab_icon}
+              />
             </View>
           ),
         }}
@@ -109,9 +119,14 @@ export function TabNavigation() {
         options={{
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
+          tabBarIcon: ({focused}) => (
             <View style={styles._tab_icon_main}>
-              <Profile_Active height={30} width={30} style={styles._tab_icon} />
+              <WithLocalSvg
+                asset={require('./../../assets/Assets/Profile_Active.svg')}
+                height={30}
+                width={30}
+                style={styles._tab_icon}
+              />
             </View>
           ),
         }}
@@ -162,11 +177,23 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {user ? (
-          <Stack.Screen
-            name="TabNavigation"
-            component={TabNavigation}
-            options={{headerShown: false}}
-          />
+          <>
+            <Stack.Screen
+              name="TabNavigation"
+              component={TabNavigation}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Comments"
+              component={Comments}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="RequestFund"
+              component={RequestFund}
+              options={{headerShown: false}}
+            />
+          </>
         ) : (
           // <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <>
@@ -186,17 +213,8 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
               component={NewPasswordScreen}
             />
             {/*<Stack.Screen name= " BirthayScreen" component={BirthdayScreen} />*/}
-            <Stack.Screen name="HomeScreen" component={HomeScreen} />
-            <Stack.Screen
-              name="Comments"
-              component={Comments}
-              options={{headerShown: false}}
-            />
-            <Stack.Screen
-              name="RequestFund"
-              component={RequestFund}
-              options={{headerShown: false}}
-            />
+            {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
+
             <Stack.Screen
               name="Login"
               component={Login}
@@ -210,3 +228,11 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
 };
 
 export default Navigation;
+let styles = StyleSheet.create({
+  _tab_icon: {
+    borderWidth: 2,
+  },
+  _tab_icon_main: {
+    borderWidth: 2,
+  },
+});
