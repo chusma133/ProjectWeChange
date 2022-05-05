@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Suneel\\ProjectWeChange\\Authentication\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "C:\\Users\\Dell\\Desktop\\ProjectWeChange\\Authentication\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hishm\\.gradle\\caches\\transforms-3\\7c0c7e113c074df493b9385345dc4b6b\\transformed\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-3\\7c0c7e113c074df493b9385345dc4b6b\\transformed\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -12,11 +12,15 @@ import HomeScreen from '../screens/HomeScreen/index';
 import BirthdayScreen from '../screens/BirthdayScreen/BirthdayScreen';
 import {Auth, Hub} from 'aws-amplify';
 import Login from './../screens/login';
-import Home from './../screens/home';
 import Discover from './../screens/discover';
-import Profile from './../screens/profile';
-import Shop from './../screens/shop';
-import WeChange from './../screens/wechange';
+import Home from '../screens/Home';
+import Shopping from '../screens/Shopping';
+import NewPost from '../screens/NewPost';
+import SelectClique from '../screens/SelectClique';
+import Profile from '../screens/Profile';
+import AddClique from '../screens/AddClique';
+import NewClique from '../screens/NewClique';
+import MyTabBar from '../components/MyTabBar';
 import Comments from './../screens/comments';
 import RequestFund from './../screens/comments';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -24,116 +28,7 @@ import Typography from './../typography';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-export function TabNavigation() {
-  return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarShowLabel: false,
-        headerShown: false,
-        tabBarStyle: {
-          backgroundColor: Typography.secondry,
-          // borderTopLeftRadius: 30,
-          // borderTopRightRadius: 30,
-          position: 'absolute',
-          bottom: 0,
-          // elevation: 9,
-          height: 60,
-          borderTopWidth: 0,
-        },
-      }}>
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <View style={styles._tab_icon_main}>
-              <WithLocalSvg
-                asset={require('./../../assets/Assets/Home_Active.svg')}
-                height={30}
-                width={30}
-                style={styles._tab_icon}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Discover"
-        component={Discover}
-        options={{
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <View style={styles._tab_icon_main}>
-              <WithLocalSvg
-                asset={require('./../../assets/Assets/Dicover_Active.svg')}
-                height={30}
-                width={30}
-                style={styles._tab_icon}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Shop"
-        component={Shop}
-        options={{
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <View style={styles._tab_icon_main}>
-              <WithLocalSvg
-                asset={require('./../../assets/Assets/Shop_Active.svg')}
-                height={30}
-                width={30}
-                style={styles._tab_icon}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="WeChange"
-        component={WeChange}
-        options={{
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <View style={styles._tab_icon_main}>
-              <WithLocalSvg
-                asset={require('./../../assets/Assets/wechange.svg')}
-                height={30}
-                width={30}
-                style={styles._tab_icon}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <View style={styles._tab_icon_main}>
-              <WithLocalSvg
-                asset={require('./../../assets/Assets/Profile_Active.svg')}
-                height={30}
-                width={30}
-                style={styles._tab_icon}
-              />
-            </View>
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
+
 const Navigation = () => {
   useEffect(() => {
     checkUser();
@@ -178,25 +73,13 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {user ? (
           <>
-            <Stack.Screen
-              name="TabNavigation"
-              component={TabNavigation}
-              options={{headerShown: false}}
-            />
-            <Stack.Screen
-              name="Comments"
-              component={Comments}
-              options={{headerShown: false}}
-            />
-            <Stack.Screen
-              name="RequestFund"
-              component={RequestFund}
-              options={{headerShown: false}}
-            />
+            <Stack.Screen name="Main" component={Main} />
+            <Stack.Screen name="Comments" component={Comments} />
+            <Stack.Screen name="RequestFund" component={RequestFund} />
           </>
         ) : (
-          // <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <>
+            <Stack.Screen name="AddClique" component={AddClique} />
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
 
@@ -212,27 +95,28 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
               name="NewPasswordScreen"
               component={NewPasswordScreen}
             />
+            <Stack.Screen name="Main" component={Main} />
             {/*<Stack.Screen name= " BirthayScreen" component={BirthdayScreen} />*/}
-            {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
+            <Stack.Screen name="NewClique" component={NewClique} />
 
-            <Stack.Screen
-              name="Login"
-              component={Login}
-              options={{headerShown: false}}
-            />
+            <Stack.Screen name="Login" component={Login} />
           </>
         )}
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
+function Main() {
+  return (
+    <Tab.Navigator
+      tabBar={props => <MyTabBar {...props} />}
+      screenOptions={{headerShown: false}}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Search" component={Shopping} />
+      <Tab.Screen name="WeShop" component={NewPost} />
+      <Tab.Screen name="WeChange" component={SelectClique} />
+      <Tab.Screen name="Profile" component={Profile} />
+    </Tab.Navigator>
+  );
+}
 export default Navigation;
-let styles = StyleSheet.create({
-  _tab_icon: {
-    borderWidth: 2,
-  },
-  _tab_icon_main: {
-    borderWidth: 2,
-  },
-});

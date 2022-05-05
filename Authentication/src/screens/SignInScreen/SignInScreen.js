@@ -15,8 +15,10 @@ console.log(errors);
     const onSignInPressed = (data) => {
         console.log(data);
         // validate user
-
-        navigation.navigate('HomeScreen');
+        navigation.reset({
+            index: 0,
+            routes: [{ name: "Main" }],
+          });
     };
 
     const onForgotPasswordPressed= () =>

@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @react-native-async-storage/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+// @react-native-community/cameraroll
+import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // @react-native-community/netinfo
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 // @react-native-picker/picker
@@ -23,6 +25,10 @@ import com.amazonaws.RNAWSCognitoPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-camera
+import org.reactnative.camera.RNCameraPackage;
+// react-native-image-crop-tools
+import com.parsempo.ImageCropTools.ImageCropToolsPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
@@ -75,11 +81,14 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
+      new CameraRollPackage(),
       new NetInfoPackage(),
       new RNCPickerPackage(),
       new RNAWSCognitoPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
+      new RNCameraPackage(),
+      new ImageCropToolsPackage(),
       new SvgPackage(),
       new VectorIconsPackage(),
       new ReactVideoPackage()
