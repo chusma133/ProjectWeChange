@@ -42,3 +42,42 @@ export const CATEGORIES = [
     require("../assets/icons/weEat.png"),
     require("../assets/icons/weBaked.png"),
 ]
+export const COMMENTS = [
+    {
+      email: 'we@monica4567',
+      for: 'I love this pic i think you have the righ vibe, i am happy to be apart of your journey',
+      price: '-56.00',
+    },
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+    {
+      email: 'we@monica4567',
+      for: 'FOR BOMB WEED',
+      price: '-56.00',
+    },
+  ];

@@ -8,7 +8,6 @@ import SignUpScreen from '../screens/SignUpScreen/SignUpScreen';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen/ConfirmEmailScreen';
 import ForgotPasswordScreen from '../screens/ForgotPasswordScreen/ForgotPasswordScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen/NewPasswordScreen';
-import HomeScreen from '../screens/HomeScreen/index';
 import BirthdayScreen from '../screens/BirthdayScreen/BirthdayScreen';
 import {Auth, Hub} from 'aws-amplify';
 import Login from './../screens/login';
@@ -21,8 +20,7 @@ import Profile from '../screens/Profile';
 import AddClique from '../screens/AddClique';
 import NewClique from '../screens/NewClique';
 import MyTabBar from '../components/MyTabBar';
-import Comments from './../screens/comments';
-import RequestFund from './../screens/comments';
+import Comments from './../screens/Comments';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Typography from './../typography';
 
@@ -74,11 +72,10 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
         {user ? (
           <>
             <Stack.Screen name="Main" component={Main} />
-            <Stack.Screen name="Comments" component={Comments} />
-            <Stack.Screen name="RequestFund" component={RequestFund} />
           </>
         ) : (
           <>
+          <Stack.Screen name="Comments" component={Comments} />
             <Stack.Screen name="AddClique" component={AddClique} />
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
@@ -96,7 +93,7 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
               component={NewPasswordScreen}
             />
             <Stack.Screen name="Main" component={Main} />
-            {/*<Stack.Screen name= " BirthayScreen" component={BirthdayScreen} />*/}
+            <Stack.Screen name= "BirthayScreen" component={BirthdayScreen} />
             <Stack.Screen name="NewClique" component={NewClique} />
 
             <Stack.Screen name="Login" component={Login} />
