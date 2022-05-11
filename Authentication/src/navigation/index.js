@@ -102,6 +102,7 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
             
             <Stack.Screen name="CliquePrimeVideo" component={CliquePrimeVideo} />
             <Stack.Screen name="NewClique" component={NewClique} />
+            <Stack.Screen name="NewPost" component={NewPost} />
             <Stack.Screen name="Shopping" component={Shopping} />
 
             <Stack.Screen name="Login" component={Login} />

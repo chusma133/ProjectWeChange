@@ -36,11 +36,12 @@ export default function AddClique({ navigation }) {
     }
   };
   const  takePicture = async () => {
-    if (camera) {
-      const options = { quality: 0.5, base64: true };
-      const data = await camera.takePictureAsync(options);
-      console.log(data.uri);
-    }
+    navigation.navigate("NewPost")
+    // if (camera) {
+    //   const options = { quality: 0.5, base64: true };
+    //   const data = await camera.takePictureAsync(options);
+    //   console.log(data.uri);
+    // }
 }
   const getImages = async () => {
     const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
