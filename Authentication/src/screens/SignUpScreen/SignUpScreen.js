@@ -122,7 +122,8 @@ const SignUpScreen = () => {
     }}
      />
 
-     <CustomButton text= "Register" onPress={handleSubmit(onRegisterPressed)} /> 
+     {/* <CustomButton text= "Register" onPress={handleSubmit(onRegisterPressed)} />  */}
+     <CustomButton text= "Register" onPress={()=>navigation.navigate("BirthdayScreen")} /> 
 
      <Text style= {styles.text}> 
      By registering, you confirm that you accept our {' '}

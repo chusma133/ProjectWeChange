@@ -67,8 +67,6 @@ let Transaction = ({ navigation }) => {
           <Text style={styles._email}>we@Adrianph313</Text>
           <Text style={styles._price}>$2,460</Text>
           <Text style={styles._balance}>BALANCE</Text>
-
-          {/*  */}
         </ImageBackground>
       </View>
 

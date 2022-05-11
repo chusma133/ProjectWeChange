@@ -19,7 +19,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import typography from '../../typography';
 import Video from 'react-native-video';
 
-let Home = ({navigation}) => {
+let CliquePrimeVideo = ({navigation}) => {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   let [buy, setBuy] = React.useState(false);
@@ -414,4 +414,4 @@ let styles = StyleSheet.create({
     marginHorizontal: 4,
   },
 });
-export default Home;
+export default CliquePrimeVideo;

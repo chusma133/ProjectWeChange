@@ -23,6 +23,10 @@ import MyTabBar from '../components/MyTabBar';
 import Comments from './../screens/Comments';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Typography from './../typography';
+import CliquePrimeVideo from '../screens/CliquePrimeVideo';
+import RequestFund from '../screens/requestFund';
+import Shop from '../screens/shop';
+import Transaction from '../screens/tansactions';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -72,29 +76,33 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
         {user ? (
           <>
             <Stack.Screen name="Main" component={Main} />
-          </>
-        ) : (
+          </>     
+        ) : ( 
           <>
+          <Stack.Screen name="SignInScreen" component={SignInScreen} />
+          <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+          <Stack.Screen name= "BirthdayScreen" component={BirthdayScreen} />
           <Stack.Screen name="Comments" component={Comments} />
+          <Stack.Screen name= "NewPasswordScreen" component={NewPasswordScreen} />
+          <Stack.Screen name= "Shop" component={Shop} />
+          <Stack.Screen
+          name="ConfirmEmailScreen" 
+          component={ConfirmEmailScreen}  
+        />
+          <Stack.Screen name="Main" component={Main} />
             <Stack.Screen name="AddClique" component={AddClique} />
-            <Stack.Screen name="SignInScreen" component={SignInScreen} />
-            <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
 
-            <Stack.Screen
-              name="ConfirmEmailScreen"
-              component={ConfirmEmailScreen}
-            />
+          <Stack.Screen name= "RequestFund" component={RequestFund} /> 
+            
             <Stack.Screen
               name="ForgotPasswordScreen"
               component={ForgotPasswordScreen}
             />
-            <Stack.Screen
-              name="NewPasswordScreen"
-              component={NewPasswordScreen}
-            />
-            <Stack.Screen name="Main" component={Main} />
-            <Stack.Screen name= "BirthayScreen" component={BirthdayScreen} />
+          <Stack.Screen name="Transaction" component={Transaction} />
+            
+            <Stack.Screen name="CliquePrimeVideo" component={CliquePrimeVideo} />
             <Stack.Screen name="NewClique" component={NewClique} />
+            <Stack.Screen name="Shopping" component={Shopping} />
 
             <Stack.Screen name="Login" component={Login} />
           </>
@@ -109,11 +117,11 @@ function Main() {
       tabBar={props => <MyTabBar {...props} />}
       screenOptions={{headerShown: false}}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Search" component={Shopping} />
-      <Tab.Screen name="WeShop" component={NewPost} />
+      <Tab.Screen name="Search" component={Discover} />
+      <Tab.Screen name="WeShop" component={Shopping} />
       <Tab.Screen name="WeChange" component={SelectClique} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
-  );
+  ); 
 }
 export default Navigation;

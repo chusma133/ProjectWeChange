@@ -13,9 +13,10 @@ import { titleStyle, regularStyle } from "../styles/Typography";
 const { width } = Dimensions.get("screen");
 import { moderateScale } from "../styles/Scalling";
 import { Auth } from 'aws-amplify';
+import { useNavigation } from "@react-navigation/native";
 
-export default function Screen({ page, navigation, title, children }) {
-  
+export default function Screen({ page, goBack, title, children }) {
+  const navigation = useNavigation()
   const [user, setUser] = useState(undefined);
   useEffect(() => {
     checkUser();
@@ -45,14 +46,14 @@ export default function Screen({ page, navigation, title, children }) {
           />
           <Text style={styles.logoText}>ELITE</Text></>}
           {/* Others page */}
-          {navigation && 
+          {goBack && 
           <Pressable onPress={()=>navigation.goBack()}><Image source={require("../assets/icons/leftArrow.png")} style={styles.logo} /></Pressable>}
         </View>
         {/* Middle part */}
         {page == "home" ? <Text style={styles.userId}>{user? user.username:"username"}</Text>:<Text style={styles.title}>{title}</Text>}
         <View style={styles.row}>
         {/* Home page */}
-          {page == "home" &&<><Image source={require("../assets/icons/verticalLoad.png")} />
+          {page == "home" &&<><Pressable onPress={()=>navigation.navigate("AddClique")}><Image source={require("../assets/icons/verticalLoad.png")} /></Pressable>
           <Image
             source={require("../assets/icons/potleafoutline.png")}
             style={{ marginHorizontal: moderateScale(10) }}

@@ -15,7 +15,7 @@ import Clique from "../components/Clique";
   
   export default function SelectClique({ navigation }) {
     return (
-      <Screen page="selectClique" navigation={navigation} title="Select Clique">
+      <Screen page="selectClique" goBack title="Select Clique">
         <View style={styles.labelView}>
             <Text style={styles.label}>
             FILTER

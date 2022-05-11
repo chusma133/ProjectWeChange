@@ -16,9 +16,8 @@ import Screen from '../components/Screen'
 let Comments = ({navigation}) => {
   return (
     
-    <Screen page="Comments" title="Comments" navigation={navigation}>
-      <ScrollView
-          style={{ padding: 5,}}>
+    <Screen page="Comments" title="Comments" goBack>
+      <ScrollView>
       <FlatList data={Array(5).fill("")}
       horizontal
       keyExtractor={(item,index)=>item+index}
@@ -36,20 +35,20 @@ let Comments = ({navigation}) => {
         </Text>
             <FlatList data={COMMENTS}
             keyExtractor={(item,index)=>item+index}
-            renderItem={({item})=><TouchableOpacity style={styles._list} activeOpacity={0.9}>
+            renderItem={({item,index})=><TouchableOpacity style={{...styles._list,flexDirection:index==2?"row-reverse":"row"}} activeOpacity={0.9}>
             <TouchableOpacity
-              style={styles._placeholder_icons}></TouchableOpacity>
-            <View style={styles._desc}>
+              style={styles._placeholder_icons}/>
+            <View style={{flex:index==2?0:1,marginRight:index==2?10:0}}>
               <Text style={{fontFamily: typography.regular,color:"black"}}>
                 {item.email}
               </Text>
               <Text style={{fontFamily: typography.regular,color:"grey"}}>
                 {item.for}
               </Text>
-            </View>
-            <Text style={{fontFamily: typography.regular}}>
+            <Text style={{fontFamily: typography.regular,marginHorizontal:15}}>
              4 h
             </Text>
+            </View>
           </TouchableOpacity>}
             />
       </ScrollView>
@@ -118,16 +117,12 @@ let styles = StyleSheet.create({
     fontSize: 12,
   },
   _list: {
-    flexDirection: 'row',
-    alignItems: 'center',
     elevation: 5,
     borderRadius: 10,
     backgroundColor: 'white',
     padding: 10,
+    marginHorizontal:7,
     marginBottom: 10,
-  },
-  _desc: {
-    flex: 1,
   },
   _comments: {
     fontFamily: typography.bold,
@@ -147,8 +142,8 @@ let styles = StyleSheet.create({
     alignItems: 'center',
   },
   _placeholder_icons: {
-    height: 30,
-    width: 30,
+    height: 40,
+    width: 40,
     backgroundColor: LIGHT_GRAY,
     borderRadius: 5,
     marginRight: 10,

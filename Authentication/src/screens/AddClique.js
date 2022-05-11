@@ -73,7 +73,7 @@ export default function AddClique({ navigation }) {
   }, []);
 
   return (
-    <Screen page="addClique" navigation={navigation} title="Add to clique">
+    <Screen page="addClique" goBack title="Add to clique">
       {showCamera && (
         <View style={styles.container}>
           <RNCamera
@@ -107,7 +107,7 @@ export default function AddClique({ navigation }) {
                 }}
               />
             </View>
-            <TouchableOpacity activeOpacity={0.8} style={styles.button}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.button} onPress={()=>navigation.navigate("NewPost")}>
               <Image
                 source={require("../assets/icons/fingerPrintWhite.png")}
                 style={{ height: moderateScale(35), width: moderateScale(27) }}

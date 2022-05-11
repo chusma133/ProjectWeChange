@@ -72,7 +72,7 @@ const NewPasswordScreen = () => {
 <View style= {styles.root2}>
 <View style={styles.row}>
 
-     <CustomButton text ="Sumbit" onPress={console.warn('Submit Pressed')} />
+     <CustomButton text ="Sumbit" onPress={()=>navigation.navigate('Main')} />
 
 <CustomButton 
 text= " Back to Sign in"

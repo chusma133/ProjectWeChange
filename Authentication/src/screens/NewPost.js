@@ -42,7 +42,7 @@ export default function NewPost({ navigation }) {
           borderRadius={50}
         />
         <View style={styles.buttons}>
-          <TouchableOpacity activeOpacity={0.8} style={styles.upload} onPress={()=>navigation.navigate('AddClique')}>
+          <TouchableOpacity activeOpacity={0.8} style={styles.upload} onPress={()=>navigation.navigate('SelectClique')}>
             <Text style={styles.buttonText}>UPLOAD TO CLIQUE</Text>
           </TouchableOpacity>
           <View style={{width:1,height:'100%',backgroundColor:WHITE}}/>

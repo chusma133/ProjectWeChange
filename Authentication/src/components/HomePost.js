@@ -1,12 +1,15 @@
-import { View, Text, ImageBackground, Image, StyleSheet } from "react-native";
+import { View, Text, ImageBackground, Image, StyleSheet,Pressable} from "react-native";
 import React from "react";
 import { height, width } from "../styles/Others";
 import { moderateScale } from "../styles/Scalling";
 import { OVERLAY } from "../styles/Colors";
 import { regularStyle } from "../styles/Typography";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomePost({ item }) {
+  const navigation = useNavigation()
   return (
+    <Pressable onPress={()=>navigation.navigate('CliquePrimeVideo')}>
     <ImageBackground
       style={styles.item}
       source={{ uri: item.image }}
@@ -19,6 +22,7 @@ export default function HomePost({ item }) {
         </Text>
       </View>
     </ImageBackground>
+    </Pressable>
   );
 }
 const styles = StyleSheet.create({
