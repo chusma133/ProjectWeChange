@@ -85,7 +85,7 @@ const PostItem = ({ onClique, ...props }) => (
         onPress={onClique}
       >
         <Image
-          source={require("../assets/icons/fingerPrintWhite.png")}
+          source={require("../../assets/icons/fingerPrintWhite.png")}
           style={{ height: moderateScale(33), width: moderateScale(25) }}
         />
       </TouchableOpacity>

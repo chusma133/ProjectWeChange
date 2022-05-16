@@ -30,19 +30,19 @@ export default function MyTabBar({ state, descriptors, navigation }) {
         let image;
         switch (route.name) {
           case "Home":
-            image = require("../assets/icons/home.png");
+            image = require("../../assets/icons/home.png");
             break;
           case "Search":
-            image = require("../assets/icons/search.png");
+            image = require("../../assets/icons/search.png");
             break;
           case "WeShop":
-            image = require("../assets/icons/weShop.png");
+            image = require("../../assets/icons/weShop.png");
             break;
           case "WeChange":
-            image = require("../assets/icons/weChange.png");
+            image = require("../../assets/icons/weChange.png");
             break;
           case "Profile":
-            image = require("../assets/icons/profile.png");
+            image = require("../../assets/icons/profile.png");
             break;
         }
         const onLongPress = () => {

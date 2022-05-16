@@ -26,6 +26,8 @@ import CliquePrimeVideo from '../screens/CliquePrimeVideo';
 import RequestFund from '../screens/RequestFund';
 import Shop from '../screens/Shop';
 import Transactions from '../screens/Transactions';
+import SplashScreen from '../screens/SplashScreen';
+import OnBoarding from '../screens/OnBoarding';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -78,7 +80,10 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
           </>     
         ) : ( 
           <>
+          <Stack.Screen name="Main" component={Main} />
+          <Stack.Screen name="OnBoarding" component={OnBoarding} />
           <Stack.Screen name="SignInScreen" component={SignInScreen} />
+          <Stack.Screen name="SplashScreen" component={SplashScreen} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
           <Stack.Screen name= "BirthdayScreen" component={BirthdayScreen} />
           <Stack.Screen name="Comments" component={Comments} />
@@ -88,7 +93,6 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
           name="ConfirmEmailScreen" 
           component={ConfirmEmailScreen}  
         />
-          <Stack.Screen name="Main" component={Main} />
             <Stack.Screen name="AddClique" component={AddClique} />
 
           <Stack.Screen name= "RequestFund" component={RequestFund} /> 

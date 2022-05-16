@@ -92,17 +92,17 @@ export default function AddClique({ navigation }) {
         >
           <View style={styles.buttonContainer}>
               <CameraButton
-                image={require("../assets/icons/close.png")}
+                image={require("../../assets/icons/close.png")}
                 onPress={() => setShowCamera(false)}
               />
               <CameraButton
-                image={require("../assets/icons/flashOff.png")}
+                image={require("../../assets/icons/flashOff.png")}
                 onPress={() => {
                   setFlashMode(flashMode == "off" ? "torch" : "off");
                 }}
               />
               <CameraButton
-                image={require("../assets/icons/flip.png")}
+                image={require("../../assets/icons/flip.png")}
                 onPress={() => {
                   setType(type === Type.back ? Type.front : Type.back);
                 }}
@@ -110,7 +110,7 @@ export default function AddClique({ navigation }) {
             </View>
             <TouchableOpacity activeOpacity={0.8} style={styles.button} onPress={()=>navigation.navigate("NewPost")}>
               <Image
-                source={require("../assets/icons/fingerPrintWhite.png")}
+                source={require("../../assets/icons/fingerPrintWhite.png")}
                 style={{ height: moderateScale(35), width: moderateScale(27) }}
               />
             </TouchableOpacity>
@@ -122,7 +122,7 @@ export default function AddClique({ navigation }) {
             </View>
             <TouchableOpacity activeOpacity={0.8} style={styles.cameraIcon} onPress={takePicture}>
               <Image
-                source={require("../assets/icons/camera.png")}
+                source={require("../../assets/icons/camera.png")}
                 style={{ height: moderateScale(55), width: moderateScale(55) }}
               />
             </TouchableOpacity>
@@ -137,7 +137,7 @@ export default function AddClique({ navigation }) {
         <View style={{...styles.container,alignItems:'center'}}>
           <Text style={styles.cameraText}>CROP</Text>
           <Image
-            source={require("../assets/icons/crop.png")}
+            source={require("../../assets/icons/crop.png")}
             style={{ marginVertical: 15 }}
           />
           {/* <Image style={styles.camera} source={{uri:selectedImage.uri}} /> */}
@@ -149,7 +149,7 @@ export default function AddClique({ navigation }) {
         />
           <TouchableOpacity activeOpacity={0.8} style={styles.crop} onPress={()=>setShowCrop(false)}>
             <Image
-              source={require("../assets/icons/fingerprint.png")}
+              source={require("../../assets/icons/fingerprint.png")}
               style={{ height: moderateScale(30), width: moderateScale(22) }}
             />
           </TouchableOpacity>
@@ -160,7 +160,7 @@ export default function AddClique({ navigation }) {
           <Text style={{ ...styles.label, marginHorizontal: moderateScale(5) }}>
             PHONE
           </Text>
-          <Image source={require("../assets/icons/phoneDown.png")} style={{}} />
+          <Image source={require("../../assets/icons/phoneDown.png")} style={{}} />
         </View>
         <Text style={styles.label}>SELECT</Text>
       </View>

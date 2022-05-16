@@ -41,29 +41,29 @@ export default function Screen({ page, goBack, title, children }) {
         <View style={styles.row}>
           {/* Homepage */}
           {page == "home" && <><Image
-            source={require("../assets/icons/weShop.png")}
+            source={require("../../assets/icons/weShop.png")}
             style={styles.logo}
           />
           <Text style={styles.logoText}>ELITE</Text></>}
           {/* Others page */}
           {goBack && 
-          <Pressable onPress={()=>navigation.goBack()}><Image source={require("../assets/icons/leftArrow.png")} style={styles.logo} /></Pressable>}
+          <Pressable onPress={()=>navigation.goBack()}><Image source={require("../../assets/icons/leftArrow.png")} style={styles.logo} /></Pressable>}
         </View>
         {/* Middle part */}
         {page == "home" ? <Text style={styles.userId}>{user? user.username:"username"}</Text>:<Text style={styles.title}>{title}</Text>}
         <View style={styles.row}>
         {/* Home page */}
-          {page == "home" &&<><Pressable onPress={()=>navigation.navigate("AddClique")}><Image source={require("../assets/icons/verticalLoad.png")} /></Pressable>
+          {page == "home" &&<><Pressable onPress={()=>navigation.navigate("AddClique")}><Image source={require("../../assets/icons/verticalLoad.png")} /></Pressable>
           <Image
-            source={require("../assets/icons/potleafoutline.png")}
+            source={require("../../assets/icons/potleafoutline.png")}
             style={{ marginHorizontal: moderateScale(10) }}
             />
-          <Image source={require("../assets/icons/inbox.png")} /></>}
+          <Image source={require("../../assets/icons/inbox.png")} /></>}
             {/* Others page */}
           {page == "addClique" && 
-          <Image source={require("../assets/icons/cog.png")} style={styles.logo} />}
+          <Image source={require("../../assets/icons/cog.png")} style={styles.logo} />}
           {page == "selectClique" && 
-          <Image source={require("../assets/icons/fingerPrintWhite.png")} style={styles.fingerLogo} />}
+          <Image source={require("../../assets/icons/fingerPrintWhite.png")} style={styles.fingerLogo} />}
         </View>
       </View>
       {children}

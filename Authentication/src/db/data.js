@@ -38,9 +38,9 @@ export const CLIQUES = [
 ]
 
 export const CATEGORIES = [
-    require("../assets/icons/we.png"),
-    require("../assets/icons/weEat.png"),
-    require("../assets/icons/weBaked.png"),
+    require("../../assets/icons/we.png"),
+    require("../../assets/icons/weEat.png"),
+    require("../../assets/icons/weBaked.png"),
 ]
 export const COMMENTS = [
     {

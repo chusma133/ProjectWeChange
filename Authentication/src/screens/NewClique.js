@@ -44,7 +44,7 @@ import {
           style={styles.button}
         >
           <Image
-            source={require("../assets/icons/fingerPrintWhite.png")}
+            source={require("../../assets/icons/fingerPrintWhite.png")}
             style={{ height: moderateScale(30), width: moderateScale(22) }}
           />
         </TouchableOpacity>

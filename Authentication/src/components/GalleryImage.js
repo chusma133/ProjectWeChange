@@ -32,7 +32,7 @@ export default function GalleryImage({ item, onPress }) {
         {item == "roll" ? (
           <>
             <Image
-              source={require("../assets/icons/camRoll.png")}
+              source={require("../../assets/icons/camRoll.png")}
               style={{
                 width: moderateScale(45),
                 height: moderateScale(30),

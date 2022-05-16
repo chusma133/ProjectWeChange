@@ -20,7 +20,7 @@ import Clique from "../components/Clique";
             <Text style={styles.label}>
             FILTER
             </Text>
-            <Image source={require("../assets/icons/phoneDown.png")} style={{}} />
+            <Image source={require("../../assets/icons/phoneDown.png")} style={{}} />
           </View>
         <FlatList
           data={CLIQUES}
