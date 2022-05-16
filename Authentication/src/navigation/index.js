@@ -3,15 +3,14 @@ import {View, ActivityIndicator, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SvgXml, WithLocalSvg} from 'react-native-svg';
-import SignInScreen from '../screens/SignInScreen/SignInScreen';
-import SignUpScreen from '../screens/SignUpScreen/SignUpScreen';
-import ConfirmEmailScreen from '../screens/ConfirmEmailScreen/ConfirmEmailScreen';
-import ForgotPasswordScreen from '../screens/ForgotPasswordScreen/ForgotPasswordScreen';
-import NewPasswordScreen from '../screens/NewPasswordScreen/NewPasswordScreen';
-import BirthdayScreen from '../screens/BirthdayScreen/BirthdayScreen';
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
+import ConfirmEmailScreen from '../screens/ConfirmEmailScreen';
+import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
+import NewPasswordScreen from '../screens/NewPasswordScreen';
+import BirthdayScreen from '../screens/BirthdayScreen';
 import {Auth, Hub} from 'aws-amplify';
-import Login from './../screens/login';
-import Discover from './../screens/discover';
+import Discover from './../screens/Discover';
 import Home from '../screens/Home';
 import Shopping from '../screens/Shopping';
 import NewPost from '../screens/NewPost';
@@ -24,9 +23,9 @@ import Comments from './../screens/Comments';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Typography from './../typography';
 import CliquePrimeVideo from '../screens/CliquePrimeVideo';
-import RequestFund from '../screens/requestFund';
-import Shop from '../screens/shop';
-import Transaction from '../screens/tansactions';
+import RequestFund from '../screens/RequestFund';
+import Shop from '../screens/Shop';
+import Transactions from '../screens/Transactions';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -98,15 +97,13 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
               name="ForgotPasswordScreen"
               component={ForgotPasswordScreen}
             />
-          <Stack.Screen name="Transaction" component={Transaction} />
+          <Stack.Screen name="Transactions" component={Transactions} />
             
             <Stack.Screen name="CliquePrimeVideo" component={CliquePrimeVideo} />
             <Stack.Screen name="NewClique" component={NewClique} />
             <Stack.Screen name="SelectClique" component={SelectClique} />
             <Stack.Screen name="NewPost" component={NewPost} />
             <Stack.Screen name="Shopping" component={Shopping} />
-
-            <Stack.Screen name="Login" component={Login} />
           </>
         )}
       </Stack.Navigator>
