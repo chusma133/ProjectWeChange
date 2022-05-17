@@ -1,6 +1,8 @@
-
-
-   export const helveticaRegular = "Helvetica-Regular";
-   export const helveticaBold = "Helvetica-Bold";
-   export const montserratRegular = "Montserrat-Regular";
-   export const montserratBold = "Montserrat-Bold";
+export default  {
+  bold: 'Montserrat-Bold',
+  regular: 'Montserrat-Regular',
+};
+export const helveticaRegular = 'Helvetica-Regular';
+export const helveticaBold = 'Helvetica-Bold';
+export const montserratRegular = 'Montserrat-Regular';
+export const montserratBold = 'Montserrat-Bold';

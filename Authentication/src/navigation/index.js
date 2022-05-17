@@ -3,8 +3,8 @@ import {View, ActivityIndicator, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SvgXml, WithLocalSvg} from 'react-native-svg';
-import SignInScreen from '../screens/SignInScreen';
-import SignUpScreen from '../screens/SignUpScreen';
+import LogIn from '../screens/LogIn';
+import SignUp from '../screens/SignUp';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen';
 import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
@@ -80,12 +80,12 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
           </>     
         ) : ( 
           <>
-          <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
-          <Stack.Screen name="SignInScreen" component={SignInScreen} />
+          <Stack.Screen name="LogIn" component={LogIn} />
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
-          <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+          <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name= "BirthdayScreen" component={BirthdayScreen} />
+          <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Comments" component={Comments} />
           <Stack.Screen name= "NewPasswordScreen" component={NewPasswordScreen} />
           <Stack.Screen name= "Shop" component={Shop} />
