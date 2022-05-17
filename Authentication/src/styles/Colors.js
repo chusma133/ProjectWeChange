@@ -17,3 +17,4 @@ export const redLight = '#F3543A';
 export const blueLight = '#2A76E8';
 export const white = '#ffffff';
 export const whiteOpectiy = '#ffffff26';
+export const BLUE ="#6699E7"

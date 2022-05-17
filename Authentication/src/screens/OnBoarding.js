@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   view: {width, alignItems: 'center'},
-  image: {marginBottom: height * 0.1},
+  image: {marginBottom: height * 0.05},
   text: {
     fontFamily: Fonts.regular,
     fontSize: 18,

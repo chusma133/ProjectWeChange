@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import Typography from "./../../typography";
+import { gray1, gray2, greenLight, WHITE } from "../../styles/Colors";
+import Fonts from "../../styles/Fonts";
 import Wishlist_Gray from "./../../../assets/Assets/Wishlist_Gray.svg";
 import Wishlist_Red from "./../../../assets/Assets/Wishlist_Red.svg";
 let Card = (props) => {
@@ -97,7 +98,7 @@ let styles = StyleSheet.create({
     position: "absolute",
     right: 0,
     top: 13,
-    backgroundColor: Typography.white,
+    backgroundColor: WHITE,
     elevation: 1,
     borderTopLeftRadius: 50,
     borderBottomLeftRadius: 50,
@@ -107,8 +108,8 @@ let styles = StyleSheet.create({
     justifyContent: "center",
   },
   _off: {
-    fontFamily: Typography.medium,
-    color: Typography.greenLight,
+    fontFamily: Fonts.regular,
+    color: greenLight,
     fontSize: 12,
   },
   _card_title_main: {
@@ -118,8 +119,8 @@ let styles = StyleSheet.create({
     marginTop: 8,
   },
   _card_title: {
-    fontFamily: Typography.medium,
-    color: Typography.gray1,
+    fontFamily: Fonts.regular,
+    color: gray1,
     fontSize: 14,
   },
   _price_main: {
@@ -128,13 +129,13 @@ let styles = StyleSheet.create({
     alignItems: "center",
   },
   _current_price: {
-    fontFamily: Typography.semiBold,
-    color: Typography.gray1,
+    fontFamily: Fonts.bold,
+    color: gray1,
     fontSize: 15,
   },
   _old_price: {
-    fontFamily: Typography.medium,
-    color: Typography.gray2,
+    fontFamily: Fonts.regular,
+    color: gray2,
     fontSize: 12,
     marginLeft: 5,
     textDecorationLine: "line-through",

@@ -9,11 +9,11 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import Typography from "../typography";
 import DolorIcon from "../../assets/Assets/dollor.svg";
 import MoneyIcon from "../../assets/Assets/Money.svg";
 import SettingIcon from "../../assets/Assets/Settings.svg";
-import typography from "../typography";
+import { WHITE } from "../styles/Colors";
+import Fonts from "../styles/Fonts";
 
 let Transactions = ({ navigation }) => {
   let transaction = [
@@ -75,7 +75,7 @@ let Transactions = ({ navigation }) => {
       <View style={styles._body}>
         <Text
           style={{
-            fontFamily: typography.regular,
+            fontFamily: Fonts.regular,
             color: "white",
             alignSelf: "center",
             marginBottom: 10,
@@ -94,14 +94,14 @@ let Transactions = ({ navigation }) => {
                   style={{ borderRadius: 100, marginRight: 10 }}
                 />
                 <View style={styles._desc}>
-                  <Text style={{ fontFamily: typography.regular }}>
+                  <Text style={{ fontFamily: Fonts.regular }}>
                     {val.email}
                   </Text>
-                  <Text style={{ fontFamily: typography.regular }}>
+                  <Text style={{ fontFamily: Fonts.regular }}>
                     {val.for}
                   </Text>
                 </View>
-                <Text style={{ fontFamily: typography.regular }}>
+                <Text style={{ fontFamily: Fonts.regular }}>
                   {val.price}
                 </Text>
               </TouchableOpacity>
@@ -130,7 +130,7 @@ let Transactions = ({ navigation }) => {
 let styles = StyleSheet.create({
   _container: {
     flex: 1,
-    backgroundColor: Typography.white,
+    backgroundColor: WHITE,
   },
   _footer: {
     height: 70,
@@ -160,7 +160,7 @@ let styles = StyleSheet.create({
     padding: 10,
     marginTop: -70,
     zIndex: 2,
-    // backgroundColor: typography.white,
+    // backgroundColor: WHITE,
     // margin: 10,
     // paddingTop:10
   },
@@ -175,21 +175,21 @@ let styles = StyleSheet.create({
     height: 61,
     width: 61,
     borderRadius: 20,
-    backgroundColor: typography.white,
+    backgroundColor: WHITE,
   },
   _email: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     marginTop: 10,
     marginBottom: 20,
   },
   _price: {
-    fontFamily: typography.bold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _balance: {
-    fontFamily: typography.regular,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     fontSize: 12,
   },
   _list: {

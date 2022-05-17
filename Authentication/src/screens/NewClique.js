@@ -4,15 +4,14 @@ import {
     ScrollView,
     Image,
     StyleSheet,
-    TouchableOpacity,
   } from "react-native";
   import React from "react";
   import Screen from "../components/Screen";
   import { height, width } from "../styles/Others";
   import Input from "../components/Input";
   import { moderateScale } from "../styles/Scalling";
-  import { BLACK, GRAY, LIGHT_GRAY, WHITE } from "../styles/Colors";
-  import { regularStyle } from "../styles/Typography";
+  import { BLACK, GRAY,  WHITE } from "../styles/Colors";
+import WeChangeButton from "../components/WeChangeButton";
   
   export default function NewClique({ navigation }) {
     return (
@@ -39,15 +38,7 @@ import {
               height={70}
               mb={10}/>
         
-        <TouchableOpacity
-          activeOpacity={0.8}
-          style={styles.button}
-        >
-          <Image
-            source={require("../../assets/icons/fingerPrintWhite.png")}
-            style={{ height: moderateScale(30), width: moderateScale(22) }}
-          />
-        </TouchableOpacity>
+        <WeChangeButton/>
         </ScrollView>
       </Screen>
     );
@@ -65,13 +56,5 @@ import {
       borderWidth:2,
       borderColor:WHITE,
     },
-   button:{
-    height: 35 ,
-    width: width*.4,
-    borderRadius: moderateScale(50),
-    backgroundColor: BLACK,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   });
   

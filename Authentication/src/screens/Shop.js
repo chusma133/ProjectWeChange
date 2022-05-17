@@ -10,12 +10,12 @@ import {
   ScrollView,
   Switch,
 } from 'react-native';
-import Typography from '../typography';
-import typography from '../typography';
 import VirtualKeyboard from 'react-native-virtual-keyboard';
 import Feather from 'react-native-vector-icons/Feather';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {SvgXml, WithLocalSvg} from 'react-native-svg';
+import { WHITE } from '../styles/Colors';
+import Fonts from '../styles/Fonts';
 
 let Shop = ({navigation}) => {
   const [active, setactive] = useState('');
@@ -86,7 +86,7 @@ let Shop = ({navigation}) => {
             <View style={styles._body}>
               <Text
                 style={{
-                  fontFamily: typography.regular,
+                  fontFamily: Fonts.regular,
                   color: 'white',
                   alignSelf: 'center',
                   marginBottom: 10,
@@ -98,14 +98,14 @@ let Shop = ({navigation}) => {
                   return (
                     <TouchableOpacity style={styles._list} key={i}>
                       <View style={styles._desc}>
-                        <Text style={{fontFamily: typography.regular}}>
+                        <Text style={{fontFamily: Fonts.regular}}>
                           {val.email}
                         </Text>
-                        <Text style={{fontFamily: typography.regular}}>
+                        <Text style={{fontFamily: Fonts.regular}}>
                           {val.for}
                         </Text>
                       </View>
-                      <Text style={{fontFamily: typography.regular}}>
+                      <Text style={{fontFamily: Fonts.regular}}>
                         {val.price}
                       </Text>
                     </TouchableOpacity>
@@ -148,7 +148,7 @@ let Shop = ({navigation}) => {
       {active === 'dollar' && (
         <View style={styles._keyboard_view}>
           <View style={styles._price_view}>
-            <Feather name="dollar-sign" size={50} color={typography.white} />
+            <Feather name="dollar-sign" size={50} color={WHITE} />
             <Text style={styles.entered_price}>{text}</Text>
           </View>
           <VirtualKeyboard
@@ -240,7 +240,7 @@ let Shop = ({navigation}) => {
 let styles = StyleSheet.create({
   _container: {
     flex: 1,
-    // backgroundColor: Typography.white,
+    // backgroundColor: WHITE,
   },
   _footer: {
     height: 70,
@@ -273,7 +273,7 @@ let styles = StyleSheet.create({
     padding: 10,
     marginTop: -70,
     zIndex: 2,
-    // backgroundColor: typography.white,
+    // backgroundColor: WHITE,
     // margin: 10,
     // paddingTop:10
   },
@@ -288,21 +288,21 @@ let styles = StyleSheet.create({
     height: 61,
     width: 61,
     borderRadius: 20,
-    backgroundColor: typography.white,
+    backgroundColor: WHITE,
   },
   _email: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     marginTop: 10,
     marginBottom: 20,
   },
   _price: {
-    fontFamily: typography.bold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _balance: {
-    fontFamily: typography.regular,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     fontSize: 12,
   },
   _list: {
@@ -322,8 +322,8 @@ let styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   entered_price: {
-    // fontFamily: typography.bold,
-    color: typography.white,
+    // fontFamily: Fonts.bold,
+    color: WHITE,
     fontSize: 50,
     lineHeight: 55,
   },
@@ -350,8 +350,8 @@ let styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   _btn_text: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily:Fonts.regular,
+    color: WHITE,
     paddingHorizontal: 10,
   },
   _card: {

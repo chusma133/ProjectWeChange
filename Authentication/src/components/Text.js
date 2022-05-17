@@ -1,7 +1,7 @@
 import { Pressable, Text } from "react-native";
 import React from "react";
 import Fonts from "../styles/Fonts";
-import Colors from "../styles/Colors";
+import Colors, { BLACK, BLUE } from "../styles/Colors";
 import { width } from "../styles/Others";
 
 export const PrimaryHeader = ({ text,style, ...props }) => {
@@ -75,13 +75,43 @@ export const Link = ({text,textStyle,...props}) => (
   <Pressable  {...props}>
     <Text
       style={{
-        fontFamily: Fonts.medium,
-        fontSize: 14,
-        letterSpacing:.02,
-        color: Colors.chineseOrange,
+        fontFamily: Fonts.regular,
+        fontSize: 18,
+        letterSpacing:.043,
+        color: BLACK,
         ...textStyle
       }}>
       {text}
     </Text>
   </Pressable>
 );
+export const ImportantLink = ({text,textStyle,...props}) => (
+  <Pressable  {...props}>
+    <Text
+      style={{
+        fontFamily: Fonts.regular,
+        fontSize: 18,
+        letterSpacing:.02,
+        color: BLUE,
+        ...textStyle
+      }}>
+      {text}
+    </Text>
+  </Pressable>
+);
+    export const SecText = ({size=16,text,mt=0,mb=0,mv=0,...props}) => (
+      <Pressable  {...props}>
+        <Text
+          style={{
+            fontFamily: Fonts.regular,
+            fontSize: size,
+            letterSpacing:.043,
+            color: BLACK,
+            marginTop:mt,
+            marginBottom:mb,
+            marginVertical:mv,
+          }}>
+          {text}
+        </Text>
+      </Pressable>
+    );

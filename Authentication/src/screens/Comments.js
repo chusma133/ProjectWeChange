@@ -8,10 +8,10 @@ import {
   Image,
   ScrollView,FlatList
 } from 'react-native';
-import typography from '../typography';
 import { COMMENTS } from '../db/data';
-import {LIGHT_GRAY} from '../styles/Colors'
+import {LIGHT_GRAY, WHITE} from '../styles/Colors'
 import Screen from '../components/Screen'
+import Fonts from '../styles/Fonts';
 
 let Comments = ({navigation}) => {
   return (
@@ -27,7 +27,7 @@ let Comments = ({navigation}) => {
 
         <Text
           style={{
-              fontFamily: typography.regular,
+              fontFamily: Fonts.regular,
               alignSelf: 'center',
               marginBottom: 20,
             }}>
@@ -39,13 +39,13 @@ let Comments = ({navigation}) => {
             <TouchableOpacity
               style={styles._placeholder_icons}/>
             <View style={{flex:index==2?0:1,marginRight:index==2?10:0}}>
-              <Text style={{fontFamily: typography.regular,color:"black"}}>
+              <Text style={{fontFamily: Fonts.regular,color:"black"}}>
                 {item.email}
               </Text>
-              <Text style={{fontFamily: typography.regular,color:"grey"}}>
+              <Text style={{fontFamily: Fonts.regular,color:"grey"}}>
                 {item.for}
               </Text>
-            <Text style={{fontFamily: typography.regular,marginHorizontal:15}}>
+            <Text style={{fontFamily: Fonts.regular,marginHorizontal:15}}>
              4 h
             </Text>
             </View>
@@ -58,7 +58,6 @@ let Comments = ({navigation}) => {
 let styles = StyleSheet.create({
   _container: {
     flex: 1,
-    // backgroundColor: Typography.white,
   },
   _footer: {
     height: 70,
@@ -99,21 +98,21 @@ let styles = StyleSheet.create({
     height: 61,
     width: 61,
     borderRadius: 20,
-    backgroundColor: typography.white,
+    backgroundColor: WHITE,
   },
   _email: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     marginTop: 10,
     marginBottom: 20,
   },
   _price: {
-    fontFamily: typography.bold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _balance: {
-    fontFamily: typography.regular,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     fontSize: 12,
   },
   _list: {
@@ -125,8 +124,8 @@ let styles = StyleSheet.create({
     marginBottom: 10,
   },
   _comments: {
-    fontFamily: typography.bold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _back_icon: {
     position: 'absolute',

@@ -8,7 +8,6 @@ import SignUp from '../screens/SignUp';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen';
 import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
-import BirthdayScreen from '../screens/BirthdayScreen';
 import {Auth, Hub} from 'aws-amplify';
 import Discover from './../screens/Discover';
 import Home from '../screens/Home';
@@ -21,13 +20,14 @@ import NewClique from '../screens/NewClique';
 import MyTabBar from '../components/MyTabBar';
 import Comments from './../screens/Comments';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Typography from './../typography';
 import CliquePrimeVideo from '../screens/CliquePrimeVideo';
 import RequestFund from '../screens/RequestFund';
 import Shop from '../screens/Shop';
 import Transactions from '../screens/Transactions';
 import SplashScreen from '../screens/SplashScreen';
 import OnBoarding from '../screens/OnBoarding';
+import SocialLogIn from '../screens/SocialLogIn';
+import BirthDay from '../screens/Birthday';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -80,11 +80,12 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
           </>     
         ) : ( 
           <>
+          <Stack.Screen name="SplashScreen" component={SplashScreen} />
           <Stack.Screen name="OnBoarding" component={OnBoarding} />
           <Stack.Screen name="LogIn" component={LogIn} />
-          <Stack.Screen name="SplashScreen" component={SplashScreen} />
+          <Stack.Screen name="SocialLogIn" component={SocialLogIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
-          <Stack.Screen name= "BirthdayScreen" component={BirthdayScreen} />
+          <Stack.Screen name= "Birthday" component={BirthDay} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Comments" component={Comments} />
           <Stack.Screen name= "NewPasswordScreen" component={NewPasswordScreen} />

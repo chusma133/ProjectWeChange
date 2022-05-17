@@ -14,10 +14,10 @@ import {
 const {width, height} = Dimensions.get('window');
 import Octicons from 'react-native-vector-icons/Octicons';
 import {SvgXml, WithLocalSvg} from 'react-native-svg';
-import Typography from '../typography';
 import Entypo from 'react-native-vector-icons/Entypo';
-import typography from '../typography';
 import Video from 'react-native-video';
+import { WHITE } from '../styles/Colors';
+import Fonts from '../styles/Fonts';
 
 let CliquePrimeVideo = ({navigation}) => {
   const video = React.useRef(null);
@@ -115,7 +115,7 @@ let CliquePrimeVideo = ({navigation}) => {
                     <Entypo
                       name="resize-full-screen"
                       size={24}
-                      color={Typography.white}
+                      color={WHITE}
                     />
                   </TouchableOpacity>
                 </View>
@@ -274,7 +274,7 @@ let styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 40 / 2,
-    backgroundColor: Typography.whiteOpectiy,
+    backgroundColor: WHITE,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -293,13 +293,13 @@ let styles = StyleSheet.create({
     marginLeft: 15,
   },
   _user_name: {
-    color: Typography.white,
-    fontFamily: Typography.medium,
+    color: WHITE,
+    fontFamily: Fonts.medium,
     fontSize: 18,
   },
   _title: {
-    color: Typography.white,
-    fontFamily: Typography.light,
+    color: WHITE,
+    fontFamily: Fonts.regular,
     fontSize: 11,
   },
   _action_main: {
@@ -307,7 +307,7 @@ let styles = StyleSheet.create({
     bottom: 120,
   },
   _add_btn: {
-    backgroundColor: Typography.primary,
+    backgroundColor: Fonts.regular,
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
@@ -320,7 +320,7 @@ let styles = StyleSheet.create({
     right: 15,
   },
   _amazon: {
-    backgroundColor: Typography.whiteOpectiy,
+    backgroundColor: WHITE,
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
@@ -329,9 +329,9 @@ let styles = StyleSheet.create({
     marginBottom: 10,
   },
   content: {
-    color: Typography.white,
+    color: WHITE,
     width: '70%',
-    fontFamily: Typography.light,
+    fontFamily: Fonts.regular,
     fontSize: 10,
     lineHeight: 20,
   },
@@ -388,12 +388,12 @@ let styles = StyleSheet.create({
     textAlign: 'center',
   },
   _heading: {
-    fontFamily: typography.semiBold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _sub_heading: {
-    fontFamily: typography.regular,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     paddingBottom: 40,
   },
   _list: {
@@ -406,8 +406,8 @@ let styles = StyleSheet.create({
     alignItems: 'center',
   },
   _email: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily: Fonts.medium,
+    color: WHITE,
     paddingLeft: 5,
   },
   _icons: {

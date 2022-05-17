@@ -2,9 +2,9 @@ import { TextInput } from "react-native";
 import React from "react";
 import { moderateScale } from "../styles/Scalling";
 import { BLACK, WHITE } from "../styles/Colors";
-import { helveticaRegular } from "../styles/Fonts";
+import Fonts from "../styles/Fonts";
 
-export default function Input({mb=0,caption,width,height=50,borderRadius=20, ...props }) {
+export default function Input({mb=0,caption,width="100%",textTransform="none",height=50,borderRadius=20, ...props }) {
   return (
     <TextInput
     style={{
@@ -13,11 +13,11 @@ export default function Input({mb=0,caption,width,height=50,borderRadius=20, ...
         borderWidth: 2,
         borderColor: WHITE,
         backgroundColor:BLACK,
-        fontFamily:helveticaRegular,
+        fontFamily:Fonts.regular,
         color:WHITE,
-        fontSize: moderateScale(14),
-        textTransform:'uppercase',
+        fontSize: moderateScale(16),
         marginLeft:8,
+        textTransform,
         width,
         height,
         elevation:3,

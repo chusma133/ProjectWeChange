@@ -11,9 +11,9 @@ import {
   TextInput,
   Modal,
 } from "react-native";
-import Typography from "../typography";
-import typography from "../typography";
 import  Ionicons  from "react-native-vector-icons/Ionicons";
+import { WHITE } from "../styles/Colors";
+import Fonts from "../styles/Fonts";
 let RequestFund = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -101,7 +101,7 @@ let RequestFund = () => {
       <View style={styles._body}>
         <Text
           style={{
-            fontFamily: typography.regular,
+            fontFamily: Fonts.regular,
             color: "white",
             alignSelf: "center",
             marginBottom: 10,
@@ -146,7 +146,7 @@ let RequestFund = () => {
 let styles = StyleSheet.create({
   _container: {
     flex: 1,
-    backgroundColor: Typography.white,
+    backgroundColor: WHITE,
   },
 
   _footer_icons: {
@@ -165,7 +165,7 @@ let styles = StyleSheet.create({
   _body: {
     flex: 3,
     padding: 10,
-    // backgroundColor: typography.white,
+    // backgroundColor: WHITE,
     // margin: 10,
     // paddingTop:10
   },
@@ -180,21 +180,21 @@ let styles = StyleSheet.create({
     height: 61,
     width: 61,
     borderRadius: 20,
-    backgroundColor: typography.white,
+    backgroundColor: WHITE,
   },
   _email: {
-    fontFamily: typography.medium,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     marginTop: 10,
     marginBottom: 20,
   },
   _price: {
-    fontFamily: typography.bold,
-    color: typography.white,
+    fontFamily: Fonts.bold,
+    color: WHITE,
   },
   _balance: {
-    fontFamily: typography.regular,
-    color: typography.white,
+    fontFamily: Fonts.regular,
+    color: WHITE,
     fontSize: 12,
   },
   _list: {
@@ -213,8 +213,8 @@ let styles = StyleSheet.create({
     flex: 1,
   },
   _pay: {
-    color: typography.white,
-    fontFamily: typography.medium,
+    color: WHITE,
+    fontFamily: Fonts.regular,
   },
   _header_inner: {
     marginTop: 50,
@@ -229,13 +229,13 @@ let styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   _to: {
-    color: typography.white,
-    fontFamily: typography.medium,
+    color: WHITE,
+    fontFamily: Fonts.regular,
   },
   _input: {
     flex: 1,
-    color: typography.white,
-    fontFamily: typography.medium,
+    color: WHITE,
+    fontFamily: Fonts.regular,
   },
   _circle: {
     height: 25,
