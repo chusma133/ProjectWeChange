@@ -28,6 +28,11 @@ import SplashScreen from '../screens/SplashScreen';
 import OnBoarding from '../screens/OnBoarding';
 import SocialLogIn from '../screens/SocialLogIn';
 import BirthDay from '../screens/Birthday';
+import Username from '../screens/Username';
+import Verification from '../screens/Verification';
+import OTP from '../screens/OTP';
+import Messages from '../screens/Messages';
+import NewMessage from '../screens/NewMessage';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -86,9 +91,13 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
           <Stack.Screen name="SocialLogIn" component={SocialLogIn} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name= "Birthday" component={BirthDay} />
-          <Stack.Screen name="Main" component={Main} />
+          <Stack.Screen name="Username" component={Username} />
+          <Stack.Screen name="Verification" component={Verification} />
+          <Stack.Screen name="OTP" component={OTP} />
           <Stack.Screen name="Comments" component={Comments} />
+          <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name= "NewPasswordScreen" component={NewPasswordScreen} />
+          <Stack.Screen name="NewMessage" component={NewMessage} />
           <Stack.Screen name= "Shop" component={Shop} />
           <Stack.Screen
           name="ConfirmEmailScreen" 
@@ -103,7 +112,6 @@ if (data.payload.event == 'signIn' || data.payload.event == 'signOut') {
               component={ForgotPasswordScreen}
             />
           <Stack.Screen name="Transactions" component={Transactions} />
-            
             <Stack.Screen name="CliquePrimeVideo" component={CliquePrimeVideo} />
             <Stack.Screen name="NewClique" component={NewClique} />
             <Stack.Screen name="SelectClique" component={SelectClique} />
@@ -125,6 +133,7 @@ function Main() {
       <Tab.Screen name="WeShop" component={Shopping} />
       <Tab.Screen name="WeChange" component={SelectClique} />
       <Tab.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Messages" component={Messages} />
     </Tab.Navigator>
   ); 
 }

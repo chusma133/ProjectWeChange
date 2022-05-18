@@ -14,7 +14,7 @@ export default function MyTabBar({ state, descriptors, navigation }) {
         paddingVertical: 10,
       }}
     >
-      {state.routes.map((route, index) => {
+      {state.routes.filter(route=>route.name!="Messages").map((route, index) => {
         const { options } = descriptors[route.key];
         const isFocused = state.index === index;
         const onPress = () => {
@@ -68,7 +68,7 @@ export default function MyTabBar({ state, descriptors, navigation }) {
           >
             <Image
               source={image}
-              style={{ transform: [{ scale: isFocused ? moderateScale(1.2) : moderateScale(1) }] }}
+              style={{ transform: [{ scale: isFocused ? moderateScale(route.name=="WeShop"?1.5:1.2) : moderateScale(route.name=="WeShop"?1.3:1) }] }}
             />
           </TouchableOpacity>
         );

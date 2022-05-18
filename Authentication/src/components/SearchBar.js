@@ -1,7 +1,7 @@
 import React from 'react'
 import { TextInput, View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-import Colors from "../styles/Colors";
+import  { BLACK, gray1, LIGHT_GRAY } from "../styles/Colors";
 import { caption } from "../styles/Typography";
 import AntIcon from "react-native-vector-icons/AntDesign";
 
@@ -21,13 +21,13 @@ export default SearchBar = ({
       borderRadius: 10,
       marginVertical: header?5:7,
       marginHorizontal:header?0:15,
-      borderColor:Colors.lightGray,
+      borderColor:LIGHT_GRAY,
       borderWidth:header?0:1.3,
     }}
   >
-    {header && <AntIcon name="arrowleft" size={25} color={Colors.gray} style={{marginRight:10}} 
+    {header && <AntIcon name="arrowleft" size={25} color={gray1} style={{marginRight:10}} 
           onPress={() => navigation.goBack()}/>}
-    <Icon name="search" size={20} color={Colors.gray} onPress={onSearch}/>
+    <Icon name="search" size={20} color={gray1} onPress={onSearch}/>
     <TextInput
       style={{
         width: "100%",
@@ -35,11 +35,11 @@ export default SearchBar = ({
         marginLeft: 10,
         ...caption,
         fontSize: 18,
-        color: Colors.black,
+        color: BLACK,
         letterSpacing: 0.4,
       }}
       placeholder={placeholder}
-      placeholderTextColor={Colors.gray}
+      placeholderTextColor={gray1}
       onSubmitEditing={onSearch}
       {...props}
     />

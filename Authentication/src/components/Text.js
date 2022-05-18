@@ -99,7 +99,7 @@ export const ImportantLink = ({text,textStyle,...props}) => (
     </Text>
   </Pressable>
 );
-    export const SecText = ({size=16,text,mt=0,mb=0,mv=0,...props}) => (
+    export const SecText = ({size=18,text,mt=0,mb=0,mv=0,...props}) => (
       <Pressable  {...props}>
         <Text
           style={{
@@ -110,6 +110,8 @@ export const ImportantLink = ({text,textStyle,...props}) => (
             marginTop:mt,
             marginBottom:mb,
             marginVertical:mv,
+            textAlign:'center',
+            paddingHorizontal:10
           }}>
           {text}
         </Text>

@@ -4,7 +4,7 @@ import { width } from '../styles/Others'
 import { BLACK } from '../styles/Colors'
 import { moderateScale } from '../styles/Scalling'
 
-export default function WeChangeButton({mv=0,...props}) {
+export default function WeChangeButton({mv=0,mt,...props}) {
   return (
     <TouchableOpacity
           activeOpacity={0.8}
@@ -16,6 +16,7 @@ export default function WeChangeButton({mv=0,...props}) {
             backgroundColor: BLACK,
             alignItems: "center",
             justifyContent: "center",
+            marginTop:mt,
           }}
           {...props}
         >

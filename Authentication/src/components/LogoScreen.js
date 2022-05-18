@@ -10,7 +10,7 @@ import React from 'react';
 import {BLACK, WHITE} from '../styles/Colors';
 import {height, width} from '../styles/Others';
 import Fonts from '../styles/Fonts';
-import { Link } from './Text';
+import { Link,SecText } from './Text';
 
 export default function LogoScreen({page, children}) {
   return (
@@ -22,7 +22,8 @@ export default function LogoScreen({page, children}) {
           source={require('../../assets/images/panda.png')}
           style={styles.logo}
         />
-        <Link text="Login to your account"/>
+        { page== "LogIn" && <Link text="Login to your account"/>}
+        {page == "Username" && <SecText size={24} text="CREATE A USER NAME"/>}
       </View>
       {children}
     </SafeAreaView>

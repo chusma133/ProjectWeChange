@@ -21,14 +21,16 @@ import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.reactnativecommunity.picker.RNCPickerPackage;
 // amazon-cognito-identity-js
 import com.amazonaws.RNAWSCognitoPackage;
-// react-native-safe-area-context
-import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
-// react-native-screens
-import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
 // react-native-image-crop-tools
 import com.parsempo.ImageCropTools.ImageCropToolsPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
+// react-native-safe-area-context
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
@@ -85,10 +87,11 @@ public class PackageList {
       new NetInfoPackage(),
       new RNCPickerPackage(),
       new RNAWSCognitoPackage(),
-      new SafeAreaContextPackage(),
-      new RNScreensPackage(),
       new RNCameraPackage(),
       new ImageCropToolsPackage(),
+      new LinearGradientPackage(),
+      new SafeAreaContextPackage(),
+      new RNScreensPackage(),
       new SvgPackage(),
       new VectorIconsPackage(),
       new ReactVideoPackage()

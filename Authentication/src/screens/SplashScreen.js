@@ -19,7 +19,7 @@ export default function SplashScreen() {
           index: 0,
           routes: [{ name: "OnBoarding" }]
      })
-    }, 500);
+    }, 2000);
   }, []);
   return (
     <SafeAreaView style={styles.screen}>
